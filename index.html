@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Paul Pellerito | Louisville, KY | The Official Website </title>
+    <title>Paul Pellerito - the official website</title>
 
     <style>
 :root {
@@ -19,21 +19,20 @@
     </style>
 
     <style>
-    @media (max-width: 600px) {
-
-}
 @media (prefers-color-scheme: dark) {
   body {
     background: #111;       /* super smooth black */
     color: #eee;
   }
 }  
-
+html {
+  font-size: 120%;
+}
 body {
   background: radial-gradient(circle at top, #ffffff 0%, var(--bg) 60%);
 color: var(--text);
   font-family: system-ui, -apple-system, BlinkMacSystemFont,
-               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+               "Helvetica, Arial, Segoe UI", Roboto, sans-serif;
   margin: 0;
   padding-top: 40px;   /* space from top */
   min-height: 100vh;
@@ -42,9 +41,7 @@ color: var(--text);
   flex-direction: column;
   align-items: center;
 }
-  .main-card {
-    transform: scale(3);
-  }
+
 #main-menu {
   display: flex;
   flex-direction: column;
@@ -129,11 +126,12 @@ color: var(--text);
 
 #fun-section { display: none; }
 #fun-link { cursor: pointer; }
+
 /* Make the résumé header clickable */
 #resume-header {
   color: var(--link);
   font-weight: 650;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   cursor: pointer;
 }
 
@@ -189,7 +187,7 @@ color: var(--text);
 /* PP */
 
 .glass-bubble {
-  cursor: pointer;
+  
   position: relative;
   border-radius: 22px;
   padding: 12px 14px;       /* ↓ smaller padding */
@@ -283,7 +281,7 @@ color: var(--text);
   text-decoration: none;
   color: var(--emerald-dark);
   font-weight: 600;
-  font-size: 10px;
+  font-size: 2rem;
   letter-spacing: -0.01em;
 }
 #email-out {
@@ -325,7 +323,7 @@ color: var(--text);
   </head>
 
   <body>
-<div class="main-card">
+
 <header class="wordmark" aria-label="Paul Pellerito">
 <div class="glass-bubble icon-bubble">
   <div class="pp-mark">
@@ -443,6 +441,6 @@ Thanks for coming.</p>
   });
 </script>
 
-</div>
+
   </body>
 </html>
