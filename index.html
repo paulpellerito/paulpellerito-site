@@ -288,37 +288,7 @@ body {
   display: inline-block;
   margin-left: 0; 
 }
-
-/* turnstile */
-
-.ts-overlay{
-  position: fixed; inset: 0;
-  display: none;
-  place-items: center;
-  background: rgba(0,0,0,0.45);
-  backdrop-filter: blur(4px);
-  z-index: 9999;
-}
-.ts-overlay.show{ display: grid; }
-
-.ts-card{
-  width: min(420px, 92vw);
-  padding: 18px;
-  text-align: center;
-  border-radius: 22px;
-}
-
-.ts-title{
-  font-weight: 650;
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-}
-
-.ts-submit{
-  margin-top: 12px;
-  padding: 10px 16px;
-  font-weight: 600;
-}
+/* 12px 24px; */
 
    </style>
   </head>
@@ -371,55 +341,10 @@ Thanks for coming.</p>
 </p>
 <p>
 <button id="resume-button" class="glass-bubble"><span class="emerald-dark">💾 résumé</span></button>
-<!-- turnstile -->
-<div id="ts-overlay" class="ts-overlay" aria-hidden="true">
-  <div class="ts-card glass-bubble">
-    <div class="ts-title">Quick human check</div>
-
-    <!-- Turnstile widget -->
-    <form id="ts-form" method="POST" action="/resume-gate">
-      <div class="cf-turnstile"
-           data-sitekey="YOUR_SITE_KEY"
-           data-theme="light"
-           data-callback="onTurnstileSuccess"></div>
-
-      <button type="submit" id="ts-submit" class="glass-bubble ts-submit" disabled>
-        Continue to résumé
-      </button>
-    </form>
-  </div>
-</div>
-
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-
 <script>
   document.getElementById("resume-button").addEventListener("click", () => {
     window.location.href = "https://drive.google.com/uc?export=download&id=17mXeUHtJv9BA4QYcct0Yj8IOEFyiYmI8"
 
-  });
-</script>
-<script>
-  const resumeBtn = document.getElementById('resume-button');
-  const overlay   = document.getElementById('ts-overlay');
-  const submitBtn = document.getElementById('ts-submit');
-
-  resumeBtn.addEventListener('click', () => {
-    overlay.classList.add('show');
-    overlay.setAttribute('aria-hidden', 'false');
-  });
-
-  // Called by Turnstile when solved
-  function onTurnstileSuccess() {
-    submitBtn.disabled = false;
-  }
-
-  // Optional: click outside to close
-  overlay.addEventListener('click', (e) => {
-    if (e.target === overlay) {
-      overlay.classList.remove('show');
-      overlay.setAttribute('aria-hidden', 'true');
-      submitBtn.disabled = true;
-    }
   });
 </script>
 
@@ -427,6 +352,7 @@ Thanks for coming.</p>
 
   </div>
 </div>
+
 <div style="visibility:hidden">
     <div id="main-menu">
 
