@@ -21,13 +21,6 @@
     </style>
 
     <style>
-@media (prefers-color-scheme: dark) {
-  body {
-    background: #111;       /* super smooth black */
-    color: #eee;
-  }
-}  
-
 body {
   background: radial-gradient(circle at top, #ffffff 0%, var(--bg) 60%);
 color: var(--text);
@@ -137,7 +130,9 @@ color: var(--text);
   cursor: pointer;
 }
 
+
 /* Hidden section inside the bubble */
+/*
 #resume-content {
   max-height: 0;
   opacity: 0;
@@ -147,11 +142,12 @@ color: var(--text);
   overflow: hidden;
 }
 
-/* Expanded state */
+ Expanded state 
 .resume-item.expanded #resume-content {
-  max-height: 4000px; /* adjust as needed */
+  max-height: 4000px; * adjust as needed *
   opacity: 1;
-}
+} 
+*/
  
 /* WORDMARK */
 
@@ -433,7 +429,8 @@ Thanks for coming.</p>
         document.getElementById("fun-section").style.display = "block";
       });
     </script>
-<script>
+<!--
+   <script>
   // Expand/collapse Résumé
   const resumeItem = document.querySelector('.resume-item');
   const resumeHeader = document.getElementById('resume-header');
@@ -442,6 +439,7 @@ Thanks for coming.</p>
     resumeItem.classList.toggle('expanded');
   });
 </script>
+   -->
 
 
   </body>
